@@ -1,38 +1,66 @@
+/**
+ * Clase Calculadora
+ * @author Jon Losada
+ * @version 23.01.2023
+ * 
+ */
 package principal;
+
 import menu.Menu;
 import operaciones.Operaciones;
 
-public class Calculadora{
-    public static void main(String[] args) {   
-        int resultado = 0;
-        String operacion = "";
-        int[] operandos = new int [2];
-        
-        Menu menu = new Menu();
-        Operaciones operaciones = new Operaciones();
-        
-        do{
-            operandos = menu.pedirNumeros();
-            operacion = menu.menuOpciones();
-            
-            if (operacion.equalsIgnoreCase("+")){
-                resultado = operaciones.sumar(operandos[0], operandos[1]);
-                System.out.println ("Resultado: " + resultado);
-            } else if (operacion.equalsIgnoreCase("-")){
-                resultado = operaciones.restar(operandos[0], operandos[1]);
-                System.out.println ("Resultado: " + resultado);
-            } else if (operacion.equalsIgnoreCase("*")){
-                resultado = operaciones.multiplicar(operandos[0], operandos[1]);
-                System.out.println ("Resultado: " + resultado);
-            } else if (operacion.equalsIgnoreCase("/")){
-                resultado = operaciones.dividir(operandos[0], operandos[1]);
-                System.out.println ("Resultado: " + resultado);
-            } else if (operacion.equalsIgnoreCase("%")){
-                resultado = operaciones.resto(operandos[0], operandos[1]);
-                System.out.println ("Resultado: " + resultado);
-            } else {
-                System.out.println ("Operación no válida");
-            }
-        }   while (menu.repetir());
-    }
+public class Calculadora {
+	public static void main(String[] args) {
+		/**
+		 * @param resultado Integer con el valor 0
+		 * @param operacion String vacio
+		 * @param operandos Array de dos enteros
+		 * 
+		 */
+		int resultado = 0;
+		String operacion = "";
+		int[] operandos = new int[2];
+
+		/**
+		 * Mediante la clase Menu y la clase Operaciones, obtenemos los operandos y las
+		 * operaciones. DespuÃ©s mediante un if preguntamos que operaciÃ³n ha introducido
+		 * y la realizamos aÃ±adiendo el resultado en la variable resultado
+		 * 
+		 */
+		Menu menu = new Menu();
+		Operaciones operaciones = new Operaciones();
+		do {
+			operandos = menu.pedirNumeros();
+			operacion = menu.menuOpciones();
+			if (operacion.equalsIgnoreCase("+")) {
+				resultado = operaciones.sumar(operandos[0], operandos[1]);
+				System.out.println("Resultado: " + resultado);
+			} else if (operacion.equalsIgnoreCase("-")) {
+				resultado = operaciones.restar(operandos[0], operandos[1]);
+				System.out.println("Resultado: " + resultado);
+			} else if (operacion.equalsIgnoreCase("*")) {
+				resultado = operaciones.multiplicar(operandos[0], operandos[1]);
+				System.out.println("Resultado: " + resultado);
+			} else if (operacion.equalsIgnoreCase("/")) {
+				/**
+				 * @param resultado El nuevo resultado de la division.
+				 * @throws ArithmeticException Si el operando2 es 0
+				 */
+				try {
+					resultado = operaciones.dividir(operandos[0], operandos[1]);
+					System.out.println("Resultado: " + resultado);
+
+				} catch (ArithmeticException e) {
+					System.out.println("Error aritmetico: " + e.getMessage());
+				}
+
+			} else if (operacion.equalsIgnoreCase("%")) {
+				resultado = operaciones.resto(operandos[0], operandos[1]);
+				System.out.println("Resultado: " + resultado);
+			} else {
+				System.out.println("Operaciï¿½n no vï¿½lida");
+			}
+
+		} while (menu.repetir());
+	}
 }
