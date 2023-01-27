@@ -1,11 +1,10 @@
+package operaciones;
 /**
  * Clase: Operaciones
  * @author Jon Losada
  * @version 23.01.2023
  * 
  */
-
-package operaciones;
 public class Operaciones{
 	/**
 	 * Metodo para sumar dos valores integer introducidos como parámetros

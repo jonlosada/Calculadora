@@ -1,12 +1,11 @@
+package menu;
+import java.util.Scanner;
 /**
  * Clase: Menu
  * @author Jon Losada
  * @version 23.01.2023
  * 
  */
-
-package menu;
-import java.util.Scanner;
 public class Menu {
     private static Scanner teclado = new Scanner(System.in);
     
