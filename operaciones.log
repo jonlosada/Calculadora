@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-01-31T11:40:26.690360500Z</date>
+  <millis>1675165226690</millis>
+  <nanos>360500</nanos>
+  <sequence>0</sequence>
+  <logger>principal.Calculadora</logger>
+  <level>FINE</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Operacion SUMA realizada</message>
+</record>
+<record>
+  <date>2023-01-31T11:40:32.518696900Z</date>
+  <millis>1675165232518</millis>
+  <nanos>696900</nanos>
+  <sequence>1</sequence>
+  <logger>principal.Calculadora</logger>
+  <level>FINE</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Operacion RESTA realizada</message>
+</record>
+<record>
+  <date>2023-01-31T11:40:40.557690600Z</date>
+  <millis>1675165240557</millis>
+  <nanos>690600</nanos>
+  <sequence>2</sequence>
+  <logger>principal.Calculadora</logger>
+  <level>FINE</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Operacion MULTIPLICACION realizada</message>
+</record>
+<record>
+  <date>2023-01-31T11:40:48.141680900Z</date>
+  <millis>1675165248141</millis>
+  <nanos>680900</nanos>
+  <sequence>3</sequence>
+  <logger>principal.Calculadora</logger>
+  <level>FINE</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Operacion DIVISION realizada</message>
+</record>
+<record>
+  <date>2023-01-31T11:40:53.261675900Z</date>
+  <millis>1675165253261</millis>
+  <nanos>675900</nanos>
+  <sequence>4</sequence>
+  <logger>principal.Calculadora</logger>
+  <level>WARNING</level>
+  <class>principal.Calculadora</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>¡DIVISION ENTRE CERO!</message>
+</record>
+</log>
